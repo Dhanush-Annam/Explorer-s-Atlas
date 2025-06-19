@@ -1,0 +1,567 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explorer's Atlas</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="/images/logo.jpg" type="image" >
+        <link rel="stylesheet" href="charitha.css">
+        <link rel="stylesheet" href="srinidhi.css">
+        <link rel="stylesheet" href="explorersatlas.css">
+        
+    </head>
+    <body>
+<p><span id="loggedInEmailDisplay"></span></p>
+        <div class="meandudaycontainer">
+            <nav>
+                <img src="/images/logo.jpg" alt="" height="80px" width="320px" id="first">
+                <ul class="nav-ul">
+                    <!-- <li ><a href="#">Home</a></li>-->     
+                    <li><a href="services">Services</a></li>
+                    <li><a href="reviews">Reviews</a></li>
+                    <!-- <li><a href="#">Packages▾</a> -->
+                    <!--<ul class="dropdown">
+                    <li><a href="#">Telangana</a></li>
+                    <li><a href="#">Kerala</a></li>
+                    <li><a href="#">Andaman</a></li>
+                    <li><a href="#">U.P</a></li>
+                    <li><a href="#">Kashmir</a></li>
+                    <li><a href="#">H.P</a></li>
+                    </ul>
+                    </li>  -->
+                    <!-- <li><a href="aboutus">About Us</a></li> -->
+                    <li><a href="contactus">Contact Us</a></li>
+                    <li><a href="signup">Sign Up</a></li>
+                    <li><a href="login">login</a></li>
+                </ul>
+        
+            </nav>
+
+            <div class="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+                
+
+            <button class="movementbuttons" id="right">></button>
+            <button class="movementbuttons" id="left"><</button>
+            
+
+            <div class="slides">
+                <div class="slide slide1"><div class="headingvishwanth">
+                    <div><h1 class="h1">Where will your next adventure take you?</h1></div>
+                    <br>
+                    <div><h2 class="h2">Unleash your inner explorer</h2></div>
+                    <br><br><br><br><br>
+                    <div><button class="buttonvishwanth" onclick="window.location.href='bookingpage'">Book now</button></div>
+                </div>        
+                </div>
+                <div class="slide slide2">
+                    <div class="headingvishwanth">
+                        <div><h1 class="h1">Walk through history’s most captivating moments</h1></div>
+                        <br>
+                        <div><h2 class="h2">Unearth the treasures of ancient worlds</h2></div>
+                        <br><br><br><br><br>
+                        <div><button class="buttonvishwanth" onclick="window.location.href='bookingpage'">Book now</button></div>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="headingvishwanth">
+                        <div><h1 class="h1">Where will your next adventure take you?</h1></div>
+                        <br>
+                        <div><h2 class="h2">Unleash your inner explorer</h2></div>
+                        <br><br><br><br><br>
+                        <div><button class="buttonvishwanth" onclick="window.location.href='bookingpage'">Book now</button></div>
+                    </div>
+                </div>
+                <div class="slide slide4">
+                    <div class="headingvishwanth">
+                        <div><h1 class="h1">Where will your next adventure take you?</h1></div>
+                        <br>
+                        <div><h2 class="h2">Unleash your inner explorer</h2></div>
+                        <br><br><br><br><br>
+                        <div><button class="buttonvishwanth" onclick="window.location.href='bookingpage'">Book now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>    
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+        </div>
+
+        <div id="chatbot-logo">
+            <img src="/images/icons8-chatbot-48.png" onclick="openchat()" style="cursor:pointer;" />
+        </div>
+        <div id="chat-container">
+            <div id="chatbox">
+                <div id="chat-header">
+                    <button id="minimize" onclick="minimize()">&#x2212;</button>
+                    <button id="close" onclick="closechat()">&#x2715;</button>
+                </div>
+                <div id="chatlog"></div>
+                <input type="text" id="userInput" placeholder="Type a message...">
+                <button id="sendbutton" onclick="send()">Send</button>
+            </div>
+        </div>
+        <!-- <br>
+        <div class="container1">
+            <nav id="footer">
+                <input type="text" id="text" placeholder=" Enter Destination">
+                <input type="date" id="text" placeholder=" none ">
+                <input type="date" id="text" placeholder="none">
+                <input type="text"  id="text" placeholder="Duration">
+                <button  class= "udaybutton" id="udaybutton">Submit</button>
+            </nav>
+            </div> -->
+        <br><br><br><br><br><br>
+        <div class="containerlochit">
+            <div class="left-image">
+                <img src="/images/locitimage.jpg" alt="Travel scene">
+            </div>
+            <div class="content-overlay">
+                <h1>About Us</h1>
+                <p class = "head">We Provide Best Tour Packages In Your Budget!!</p>
+                <p class="head" id="visitors-count">We Had Over 500 Vistors</p>
+                <p> At explorer's Atlas,we believe that travel should be accessible to everyone weather you are a thrill seeker, a culture enthusiast or simply looking to relax on a beach we have, curated a collection of the best tour packages that fit your budget and dreams</p>
+                <div class="photo-container">
+                    <img src="/images/locitimage2.jpg" alt="Travel photo 1">
+                    <img src="/images/locitimage3.jpg" alt="Travel photo 2">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+            <div class="Row">
+            <div class="class">
+                <img src="/images/Best Price.jpg" alt="Description of the 1st Image" width="100">
+                <h5>Competitive Pricing</h5>
+                <p> We constantly monitor the market to ensure our prices are the lowest <br> If you find a better deal elsewhere, we’ll match it!</p>
+            </div>
+        <div class="class">
+            <img src="/images/Best Services.jpg" alt="Description of the 2nd Image" width="100">
+            <h5>Best Services</h5>
+            <p >Travel seamlessly with our reliable transportation services <br>
+            Elevate your travel experience with our thrilling adventure activities</p>
+        </div>
+        <div class="class">
+            <img src="/images/Country Wise Coverage.jpg" alt="Description of the 3rd Image" width="100">
+            <h5>Country Wise Coverage</h5>
+            <p>India is not just a destination; it's an experience that stays with you long <br>
+                after you leave   Come and explore the enchanting beauty and rich culture of this incredible country!</p>
+        </div>
+            </div>
+
+        <!-- destinations -->
+                 <div class="srinidhiwork">
+                <h1>DESTINATION</h1>
+                <h2>EXPLORE TOP DESTINATIONS</h2>
+                <div class="charitha">
+                    <div class="gun">
+                        <div class="sheet">
+                            <div class="image" onclick="openModal('/images/ooty.jpg','Kerala')">
+                                <img src="/images/ooty.jpg" alt="Travel Site 1">
+                               <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Kerala')">Kerala</p>
+                            <button class="favorite-btn" onclick="addToFavorites('Kerala')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/assam.jpg','Assam')">
+                                <img src="/images/assam.jpg" alt="Travel Site 2">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Assam')">Assam</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Assam')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/mega.jpg','Meghalaya')">
+                                <img src="/images/mega.jpg" alt="Meghalaya">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Meghalaya')">Meghalaya</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Meghalaya')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/assam.jpg','Himachal Pradesh')">
+                                <img src="/images/shimla.jpg" alt="Himachal Pradesh">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Himachal Pradesh')">Himachal Pradesh</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Himachal Pradesh')">❤️</button>
+                            </div>                </div>
+                        <div class="sheet" onclick="openModal('/images/amir.jpg','Maharastra')">
+                            <div class="image">
+                                <img src="/images/amir.jpg" alt="Travel Site 5">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Maharastra')">Maharastra</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Maharashtra')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/sunny.jpg','Odissa')">
+                                <img src="/images/sunny temp.jpg" alt="Travel Site 6">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Odissa')">Odissa</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Odissa')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/raj.jpg','Rajasthan')">
+                                <img src="/images/raj.jpg" alt="Rajasthan">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Rajasthan')">Rajasthan</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Rajasthan')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/tirumala.jpg','Andra Pradesh')">
+                                <img src="/images/tirumala.jpg" alt="Andra Pradesh">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Andhra Pradesh')">Andhra Pradesh</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Andhra Pradesh')">❤️</button>
+                            </div>
+                        </div>
+                        <div class="sheet">
+                            <div class="image" onclick="openModal('/images/lak corals.jpg','Lakshdweep')">
+                                <img src="/images/lak corals.jpg" alt="Lakshdweep">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Lakshdweep')">Lakshdweep</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Lakshdweep')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/andaman.jpg','Andaman & Nicobar')">
+                                <img src="/images/andaman.jpg" alt="Andaman & Nicobar">
+                               <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Andaman & Nicobar')">Andaman & Nicobar</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Andaman & Nicobar')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/maldives.jpg','Maldives')">
+                                <img src="/images/maldives.jpg" alt="Travel Site 11">
+                                 <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Maldives')">Maldives</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Maldives')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/goa.jpg','Goa')">
+                                <img src="/images/goa.jpg" alt="Goa">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Goa')">Goa</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Goa')">❤️</button>
+                            </div>
+                        </div>
+                        <div class="sheet">
+                            <div class="image" onclick="openModal('/images/charminar.jpg','Telangana')">
+                                <img src="/images/charminar.jpg" alt="Telangana">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Telangana')">Telangana</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Telangana')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/taj.jpg','Agra')">
+                                <img src="/images/taj.jpg" alt="Agra">
+                                 <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Agra')">Agra</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Delhi')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/temp.jpg','Tamil Nadu')">
+                                <img src="/images/temp.jpg" alt="Tamil Nadu">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Tamil Nadu')">Tamil Nadu</p>
+                                <button class="favorite-btn" onclick="addToFavorites('Tamil Nadu')">❤️</button>
+                            </div>
+                            <div class="image" onclick="openModal('/images/karnataka2.jpg','Karnataka')">
+                                <img src="/images/karnataka2.jpg" alt="Karnataka">
+                                <p class="location-link" onclick="event.stopPropagation();openInGoogleMaps('Karnataka')">Karnataka</p>
+                               <button class="favorite-btn" onclick="addToFavorites('Karanataka')">❤️</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+                <div id="imageModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal()">&times;</span>
+                        <img id="modalImage" src="" alt="Selected Destination">
+                        <h3 id="modalText">Destination Name</h3>
+                    </div>
+                </div>
+    <br>
+    <br>
+        <div class="Info">
+        
+                    <h4 class="SERVICE">SERVICES</h4>
+                    <br>
+                <h2 class="TOURS">Tours & Travel Services</h2>
+                <br><br>
+                <div class="box">
+                <div class="Travel">
+                    <img src="/images/Travel.jpg" alt="Description of the 1st Image" width="80">
+                    <h3>
+                        Travel Guide
+                    </h3>
+                    <p> In-depth insights into top travel spots including must-see attractions and local   travel tips.</p>
+                </div>
+                
+                <div class="Ticket">
+                    <img src="/images/Ticket.jpg" alt="Description of the 2nd Image" width="80">
+                    <h3>
+                        Ticket Booking
+                    </h3>
+                    <p>Our intuitive platform allows you to   search   compare and book   tickets in just a few clicks. </p>
+                </div>
+                <div class="Hotel">
+                    <img src="/images/Hotel.jpg" alt="Description of the 3rd Image" width="80" >
+                    <div>
+                        <h3>
+                        Hotel Booking
+                    </h3>
+                    <p>Browse thousands of hotels, from charming   boutique inns   to world-class   resorts</p>
+                </div>
+            </div>
+            
+                </div>
+
+            <div class="packages-container">
+                    <div class="packages">
+                        <div class="center-text">
+                        <h5 class="primarytext" style="letter-spacing: 5px ; font-size: 2rem">PACKAGES</h5>
+                        <h1 class="secondarytext">Your Ideal Vacation, Our Perfect Packages</h1>
+                        </div>
+                        <div class="packages-grid">
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item1" src="/images/KASHMIR.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Kashmir</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Discover the enchanting beauty of Kashmir</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.6 <small>(2643)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i>  14,999</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item2" src="/images/MANALI.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Himachal Pradesh</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Discover the breathtaking landscapes of H.P</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.5 <small>(2549)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 9,999</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item3" src="/images/AGRA.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Uttar Pradesh</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Embark on a captivating journey through U.P</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.1 <small>(2472)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 5,999</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item4" src="/images/CHARMINAR.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Telangana</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Explore the vibrant heart of Telangana</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.3 <small>(2365)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 5,599</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item5" src="/images/KERALA.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Kerala</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Discover Kerala , known as God’s Own Country</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.4 <small>(2248)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 9,999</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="info">
+                                <div class="img-div">
+                                <img id="item6" src="/images/ANDAMAN.jpg">
+                                </div>
+                                <div class="pre-info">
+                                    <small class="info-icon-text"><i class="fa-solid fa-map-location-dot"></i>Andaman</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-calendar-days"></i>3 days</small>
+                                    <small class="info-icon-text"><i class="fa-solid fa-person"></i>2 Person</small>
+                                </div>
+                                <a class="mid-info" href="#">Unveil the hidden gems of the Andaman</a>
+                                <div class="bottom-container">
+                                <div class="post-info">
+                                    <h6 class="rating"><i class="fa-solid fa-face-grin-stars"></i> 4.1 <small>(2167)</small></h6>
+                                    <h5 class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 6,499</h5>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    <br><br>
+
+    <h2 class="h2gagana">Latest from our blog</h2>
+
+    <div class="blog-section">
+        <div class="blog-posts">
+            <div class="post">
+                <div class="post-image" style="background-image: url('https://lp-cms-production.imgix.net/image_browser/Eiffel_Tower_Paris_skyline.jpg?auto=format&fit=crop&q=40&sharp=10&vib=20&ixlib=react-8.6.4');">
+                    <div class="post-date">
+                        <span>19</span>
+                        <span>Nov</span>
+                    </div>
+                </div>
+                <div class="post-info">
+                    <span class="post-category">Admin | Tours & Travel</span>
+                    <p>Join us on our biggest trip to the city of love </p>
+                </div>
+            </div>
+            
+            <div class="post">
+                <div class="post-image" style="background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQLSkB9isGkdVyvd2nZewGeF7MQn7ouN5ouy3nFInLg6iUscVHndMVqccNQ2E1HD4h7C1qt3nTbMyTNJXM97U5-EKPCchDs0kPSDwL4Qw');">
+                    <div class="post-date">
+                        <span>15</span>
+                        <span>Jan</span>
+                    </div>
+                </div>
+                <div class="post-info">
+                    <span class="post-category">Admin | Tours & Travel</span>
+                    <p>win exciting deals and join us in a trip to maldives</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-image" style="background-image: url('https://th.bing.com/th/id/OIP.2nMwjtdrcelbm1eCR9NirgHaE8?rs=1&pid=ImgDetMain');">
+                    <div class="post-date">
+                        <span>12</span>
+                        <span>Feb</span>
+                    </div>
+                </div>
+                <div class="post-info">
+                    <span class="post-category">Admin | Tours & Travel</span>
+                    <p>join us in a trip to the seven sisters</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section about fade-in">
+                <h3>About TravelExplorer</h3>
+                <p id="qlinkp">TravelExplorer is your gateway to unforgettable adventures. We help you discover amazing destinations and plan your perfect trip.</p>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" ><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section links fade-in">
+                <h3 id="qlinkhead">Quick Links</h3>
+                <ul id="qlinks">
+                    <li><a href="explorersatlas.html">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#packages">Travel Packages</a></li>
+                    <li><a href="#blog">Travel Blog</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+          <div class="footer-section contact fade-in">
+            <h3>Contact Us</h3>
+            <p id="qlinkp"><i class="fas fa-phone"></i> +91 (955) 123-4567</p>
+            <p id="qlinkp"><i class="fas fa-envelope"></i> info@explorersatlas.com</p>
+            <p id="qlinkp"><i class="fas fa-map-marker-alt"></i> 123 Papermill St, Lucknow</p>
+        </div>
+
+
+        
+        <div class="footer-section subscribe fade-in">
+            <div class="email-form">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" name="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit" id="charithabtn">Subscribe</button>
+                </form>
+              <p id="responseMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom fade-in">
+        <p>&copy; 2024 ExplorersAtlas. All rights reserved.</p>
+        <p>
+            <a href="#privacy">Privacy Policy</a> | 
+            <a href="#terms">Terms of Service</a> | 
+            <a href="#faq">FAQ</a>
+        </p>
+    </div>
+</footer>
+<button onclick="scrollToTop()" class="top-button" id="topButton">TOP OF THE PAGE</button>
+<script>
+    window.onscroll = function() { const topButton = document.getElementById('topButton');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { topButton.style.display = 'block';
+
+    } else { topButton.style.display = 'none'; } };
+    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth'});
+    }
+    // favorites
+    function addToFavorites(destination) {
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        if (!favorites.includes(destination)) {
+            favorites.push(destination);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            alert(destination + " added to favorites!");
+        } else {
+            alert(destination + " is already in favorites!");
+        }
+    }
+
+    window.onload = function() {
+        fetch('http://localhost:8080/visitors')
+            .then(response => response.text())
+            .then(data => {
+                console.log('Total visits:', data);
+                let Visorscnt = document.getElementById("visitors-count");
+                Visorscnt.innerText="We Have Over " + data + " Visistors";
+            })
+            .catch(error => {
+                console.error('Error fetching visit count:', error);
+            });
+    };
+    </script>
+    <script src="slider.js"></script>
+        <script src="chatbot.js"></script>
+        <script src="newjs.js"></script>
+        <script src="srinidhijs.js"></script>
+        <script src="Map.js"></script>
+        <script src="username.js"></script>
+        <script src="subscribe.js"></script>
+ </body>
+</html>

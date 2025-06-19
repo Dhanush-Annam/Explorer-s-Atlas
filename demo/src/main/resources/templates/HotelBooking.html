@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #dff1ff, #ffffff);
+        margin: 0;
+        padding: 40px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .booking-container {
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 16px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid #eee;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #2c3e50;
+      }
+
+      label {
+        font-weight: 600;
+        margin-top: 10px;
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        transition: border 0.3s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #017c28;
+        outline: none;
+      }
+
+      button {
+        background-color: #017c28;
+        color: white;
+        padding: 14px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #32a356;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      @media screen and (max-width: 480px) {
+        .booking-container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="booking-container">
+      <h2>🏨 Hotel Booking Form</h2>
+
+      <form id="bookingForm">
+        <label for="fullName">Full Name</label>
+        <input
+          name="fullName"
+          type="text"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          name="phone"
+          type="text"
+          placeholder="Enter phone number"
+          required
+        />
+
+        <label for="roomType">Room Type</label>
+        <select name="roomType" required>
+          <option value="">Select a room</option>
+          <option value="Deluxe">Deluxe</option>
+          <option value="Standard">Standard</option>
+          <option value="Suite">Suite</option>
+        </select>
+
+        <label for="checkInDate">Check-in Date</label>
+        <input name="checkInDate" type="date" required />
+
+        <label for="checkOutDate">Check-out Date</label>
+        <input name="checkOutDate" type="date" required />
+
+        <label for="guests">Number of Guests</label>
+        <input name="guests" type="number" min="1" required />
+
+        <label for="specialRequests">Special Requests</label>
+        <textarea
+          name="specialRequests"
+          placeholder="Any additional requests..."
+        ></textarea>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const data = {
+            fullName: form.fullName.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            roomType: form.roomType.value,
+            checkInDate: form.checkInDate.value,
+            checkOutDate: form.checkOutDate.value,
+            guests: form.guests.value,
+            specialRequests: form.specialRequests.value,
+          };
+
+          fetch("http://localhost:8080/api/hotelbooking", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert("Booking successful");
+                form.reset();
+                window.location.href="/dashbourd";
+              } else {
+                alert("Booking failed.");
+              }
+            })
+            .catch((error) => {
+              alert("Error: " + error);
+            });
+        });
+    </script>
+  </body>
+</html>

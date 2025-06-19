@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours & Travel Services</title>
+  <form id="bookingForm" method="POST" action="http://localhost:8080/bookings">
+
+  <style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.services-section {
+  padding: 40px 20px;
+}
+
+.services-section h2 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.services-section h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 2px solid #7dbf43;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+  <section class="services-section">
+    <h2>SERVICES</h2>
+    <h1>Tours & Travel Services</h1>
+    
+    <div class="service-cards">
+      <!-- Travel Guide -->
+      <div class="card">
+        <img src="images/Travel.jpg" alt="Travel Guide Icon">
+        <h3>Travel Guide</h3>
+        <p>In-depth insights into top travel spots including must-see attractions and local travel tips.</p>
+      </div>
+
+      <!-- Ticket Booking -->
+      <div class="card">
+        <img src="images/Ticket.jpg" alt="Ticket Icon">
+        <h3>Ticket Booking</h3>
+        <p>Our intuitive platform allows you to search compare and book tickets in just a few clicks.</p>
+      </div>
+
+      <!-- Hotel Booking -->
+      <div class="card">
+
+        <a><img src="images/Hotel.jpg" onclick="window.location.href='/hotelbooking';" alt="Hotel Icon"></a>
+         
+        <h3>Hotel Booking</h3>
+        <p>Browse thousands of hotels, from charming boutique inns to world-class resorts.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

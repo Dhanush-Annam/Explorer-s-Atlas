@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Review System</title>
+  <link rel="stylesheet" href="Reviews.css">
+</head>
+<body>
+  <div class="review-container">
+    <h2>Leave a Review</h2>
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label>Your Rating</label>
+      <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">Your Comment</label>
+      <textarea id="comment" rows="4" placeholder="Write your review here..."></textarea>
+    </div>
+    <button onclick="submitReview()">Submit Review</button>
+
+    <div class="review-list" id="reviewList">
+      <h3>Reviews</h3>
+    </div>
+  </div>
+
+  <script src="Review.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+
+        body {
+    
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .srinidhiwork {
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #7AB730;
+        } 
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        .charitha {
+            /* max-width:1500px; */
+            width:95vw;
+            margin: 0 auto;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .gun {
+            display: inline-flex;
+        }
+
+        .sheet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100vw;
+            max-width: 1000px;
+        }
+
+        .image {
+            width: 45%;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .image img {
+            max-width: 350px;
+            height: 270px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .image p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            max-width: 500px;
+            width: 80%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .modal-content h3 {
+            margin: 20px 0 10px;
+            color: #030303;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            font-size: 45px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .close-button:hover {
+            color: #050505;
+        }
+    
+        
+
+
+  

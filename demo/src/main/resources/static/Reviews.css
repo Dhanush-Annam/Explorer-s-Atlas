@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  margin: 0;
+  padding: 2rem;
+  color: #a5d6a7;
+}
+
+.review-container {
+  max-width: 650px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a5d6a7;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.review-container:hover {
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #1b5e20;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #33691e;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #f1f8e9;
+  color: #2e7d32;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #43a047;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 8px;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 28px;
+  color: #cfd8dc;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input:checked ~ label {
+  color: #66bb6a;
+  transform: scale(1.2);
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(to right, #388e3c, #2e7d32);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2e7d32, #1b5e20);
+}
+
+.review-list {
+  margin-top: 30px;
+}
+
+.review-item {
+  border-top: 1px solid #c8e6c9;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.review-item strong {
+  font-size: 1.1rem;
+  color: #1b5e20;
+}
+
+.review-item span {
+  display: block;
+  font-size: 1.2rem;
+  color: #66bb6a;
+  margin-bottom: 5px;
+}
+
+.review-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #2e7d32;
+}

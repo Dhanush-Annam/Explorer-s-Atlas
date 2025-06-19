@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link rel="icon" href="/images/logo.jpg" alt="logo" type="image" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: url("https://images.unsplash.com/photo-1551126892-7cf2e2d9a4d9?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat center center/cover;
+        height: 100vh;
+      }
+
+      .i1 {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 30px;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        gap: 50px;
+      }
+
+      #i3 {
+        flex: 1;
+      }
+
+      #i3 h6 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: rgb(12, 180, 12);
+      }
+
+      #i3 ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      #i3 li::before {
+        content: "✓ ";
+        color: rgb(12, 180, 12);
+        margin-right: 5px;
+      }
+
+      #i2 {
+        flex: 1;
+        background-color: white;
+        color: black;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      #kushih1 {
+        background-color: rgb(12, 180, 12);
+        color: rgb(24, 21, 21);
+        margin: -30px -30px 30px -30px;
+        padding: 20px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      input[type="text"],
+      select {
+        width: 95%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 2px solid #1d1b1b;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #1d1b1b;
+      }
+      select {
+        width: 100%;
+      }
+      input[type="password"],
+      select {
+        width: 95%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 2px solid #1d1b1b;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #1d1b1b;
+      }
+      select {
+        width: 100%;
+      }
+
+      button#button {
+        background-color: rgb(12, 180, 12);
+        color: rgb(24, 22, 22);
+        padding: 12px;
+        width: 100%;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+      }
+
+      button#button:hover {
+        background-color: #32600a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="i1">
+      <div class="container">
+        <div id="i3">
+          <h5 id="offer">MEGA OFFER</h5>
+          <h6>30% OFF ON FIRST TRIP</h6>
+          <ul>
+            <li>Benefit of offer</li>
+            <li>Personalized travel recommendation</li>
+            <li>24/7 support</li>
+          </ul>
+        </div>
+        <div id="i2">
+          <h1 id="kushih1">SIGN UP NOW</h1>
+          <form action="#">
+            <input type="text" id="name" placeholder="Your name" required />
+            <br /><br />
+            <input type="text" id="email" placeholder="Your email" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="your password"
+              ;
+              required
+            />
+            <!-- <br><br>
+                <select name="select" id="select" required>
+                    <option value="" disabled selected>Choose your destination</option>
+                    <option value="1">Maldives</option>
+                    <option value="2">Goa</option>
+                    <option value="3">Shimla</option>
+                    <option value="4">Srinagar</option>
+                    <option value="5">Jodhpur</option>
+                </select> -->
+            <br /><br />
+            <button id="button">login/signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("button").addEventListener("click", function (e) {
+        e.preventDefault();
+        const name = encodeURIComponent(document.getElementById("name").value);
+        const email = encodeURIComponent(
+          document.getElementById("email").value
+        );
+        const password = encodeURIComponent(
+          document.getElementById("password").value
+        );
+        const formData = `name=${name}&email=${email}&password=${password}`;
+
+        fetch("http://localhost:8080/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: formData,
+        }).then(Response =>{
+            return Response.text();
+        })
+          .then((data) => {
+            if (data == "User with this email already exists") {
+              alert("User with this email already exists");
+            } else {
+              alert("user registered succefully");
+              window.location.href = "/";
+            }
+          })
+          .catch((e) => {
+            alert("error , please try again");
+          });
+      });
+    </script>
+  </body>
+</html>

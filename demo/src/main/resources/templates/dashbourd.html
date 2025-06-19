@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <p><span id="loggedInEmailDisplay"></span></p>
+    <div id="dashboard">
+      <header>
+        <h1 id="heading-dashboard">Dashboard</h1>
+        <p>Current balance: ₹12,000</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#track-trips">Track Trips</a></li>
+          <li><a href="#calendar">Calendar</a></li>
+          <li><a href="#budget-management">Budget Management</a></li>
+          <li><a href="/bookingpage">Book A trip </a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="track-trips">
+          <h2>Track Trips</h2>
+          <p>Upcoming trips:</p>
+          <ol>
+            <li>Kashmir - 3 days</li>
+            <li>Kerala - 7 days</li>
+            <li>Andaman & Nicobar Islands - 10 days</li>
+          </ol>
+        </section>
+        <section id="calendar">
+          <h2>Calendar</h2>
+          <p>Add your events and appointments here.</p>
+          <div class="container mt-5">
+            <b> <label id="msg" class="text-danger"></label></b>
+            <form action="#">
+              <table id="Calendar-table" class="col-11 table table-striped table-bordered">
+                <thead>
+                  <tr> <th class="col-2">S.No.</th> <th class="col-3">Event/Appointment Name</th> <th class="col-3">Event/Appointment Date</th><th class="col-3">Remarks</th><th><button onclick="addRow()">+</button></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </form>
+          </div>
+        </section>
+        <div id="block">
+        <section id="booked-hotel-section">
+          <h2>Budget Management</h2>
+          <div id="booked-hotel">
+            </div>
+        </section>
+        <section id="to-do-list">
+          <h2>To-Do List</h2>
+          <div id="tasklist"></div>
+          <button id="addtaskbtn">Add Task</button>
+          <div id="taskinputdiv">
+            <input type="text" placeholder="Enter new task..." id="taskinput" />
+            <button id="taskadded" onclick="addtodolist()">Add</button>
+          </div>
+        </section>
+
+        <section id="wishlist">
+          <h2>Wishlist</h2>
+          <div id="add-to-wish-list"></div>
+          <button id="addwishbtn">Add Wish</button>
+          <div id="wishinputdiv">
+            <input type="text" placeholder="Enter new wish..." id="wishinput" />
+            <button id="wishadded" onclick="addwishlist()">Add</button>
+          </div>
+        </section>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="username.js"></script> -->
+  </body>
+</html>
