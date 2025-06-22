@@ -57,7 +57,7 @@ public class HomeController {
 
     @GetMapping("/reviews")
     public String reviews() {
-        return "reviews";
+        return "Reviews";
     }
 
     @GetMapping("/hotelbooking")
