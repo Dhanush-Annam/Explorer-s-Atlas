@@ -35,7 +35,7 @@ function loadTasks() {
     return;
   }
   fetch(
-    `http://localhost:8080/todo/get?userEmail=${encodeURIComponent(
+    `https://explorer-s-atlas.onrender.com/todo/get?userEmail=${encodeURIComponent(
       globalUserEmail
     )}`
   )
