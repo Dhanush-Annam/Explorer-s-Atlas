@@ -544,7 +544,7 @@
     }
 
     window.onload = function() {
-        fetch('http://localhost:8080/visitors')
+        fetch('https://explorer-s-atlas.onrender.com/visitors')
             .then(response => response.text())
             .then(data => {
                 console.log('Total visits:', data);
