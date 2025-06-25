@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="charitha.css">
         <link rel="stylesheet" href="srinidhi.css">
         <link rel="stylesheet" href="explorersatlas.css">
+        <link rel="stylesheet" href="gagana.css">
         
     </head>
     <body>
@@ -20,17 +21,6 @@
                     <!-- <li ><a href="#">Home</a></li>-->     
                     <li><a href="services">Services</a></li>
                     <li><a href="reviews">Reviews</a></li>
-                    <!-- <li><a href="#">Packages▾</a> -->
-                    <!--<ul class="dropdown">
-                    <li><a href="#">Telangana</a></li>
-                    <li><a href="#">Kerala</a></li>
-                    <li><a href="#">Andaman</a></li>
-                    <li><a href="#">U.P</a></li>
-                    <li><a href="#">Kashmir</a></li>
-                    <li><a href="#">H.P</a></li>
-                    </ul>
-                    </li>  -->
-                    <!-- <li><a href="aboutus">About Us</a></li> -->
                     <li><a href="contactus">Contact Us</a></li>
                     <li><a href="signup">Sign Up</a></li>
                     <li><a href="login">login</a></li>
@@ -108,16 +98,6 @@
                 <button id="sendbutton" onclick="send()">Send</button>
             </div>
         </div>
-        <!-- <br>
-        <div class="container1">
-            <nav id="footer">
-                <input type="text" id="text" placeholder=" Enter Destination">
-                <input type="date" id="text" placeholder=" none ">
-                <input type="date" id="text" placeholder="none">
-                <input type="text"  id="text" placeholder="Duration">
-                <button  class= "udaybutton" id="udaybutton">Submit</button>
-            </nav>
-            </div> -->
         <br><br><br><br><br><br>
         <div class="containerlochit">
             <div class="left-image">
@@ -423,50 +403,71 @@
             </div>
     <br><br>
 
-    <h2 class="h2gagana">Latest from our blog</h2>
+<h2 class="h2gagana-1">Latest from our blog</h2> 
+<div class="blog-section-1">   
+  <div class="blog-posts-1">      
+    <!-- Blog Card 1 -->     
+    <div class="post-1"> 
+      <div class="post-image-1" style="background-image: url('https://lp-cms-production.imgix.net/image_browser/Eiffel_Tower_Paris_skyline.jpg?auto=format&amp;fit=crop&amp;q=40&amp;sharp=10&amp;vib=20&amp;ixlib=react-8.6.4');">                     
+        <div class="post-date-1">                                  
+          <span>19</span><span>Nov</span>         
+        </div>       
+      </div>       
+      <div class="post-info-1">         
+        <span class="post-category-1">Admin | Tours & Travel</span>         
+        <p>Join us on our biggest trip to the city of love</p>         
+        <div class="button-group-1">           
+          <button class="blogpost-buttons" onclick="likePost(1)">❤ I loved this</button>           
+          <button class="blogpost-buttons" onclick="dislikePost(1)">🙁 Maybe another</button>           
+          <button class="blogpost-buttons" onclick="savePost(1)">🔖 Save for later</button>         
+        </div>         
+        <p class="status-msg-1" id="status1-1"></p>         
+        <p class="counter-1">❤️ Likes: <span id="likeCount1-1">0</span> | 🙁 Dislikes: <span id="dislikeCount1-1">0</span></p>       
+      </div>     
+    </div>      
 
-    <div class="blog-section">
-        <div class="blog-posts">
-            <div class="post">
-                <div class="post-image" style="background-image: url('https://lp-cms-production.imgix.net/image_browser/Eiffel_Tower_Paris_skyline.jpg?auto=format&fit=crop&q=40&sharp=10&vib=20&ixlib=react-8.6.4');">
-                    <div class="post-date">
-                        <span>19</span>
-                        <span>Nov</span>
-                    </div>
-                </div>
-                <div class="post-info">
-                    <span class="post-category">Admin | Tours & Travel</span>
-                    <p>Join us on our biggest trip to the city of love </p>
-                </div>
-            </div>
-            
-            <div class="post">
-                <div class="post-image" style="background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQLSkB9isGkdVyvd2nZewGeF7MQn7ouN5ouy3nFInLg6iUscVHndMVqccNQ2E1HD4h7C1qt3nTbMyTNJXM97U5-EKPCchDs0kPSDwL4Qw');">
-                    <div class="post-date">
-                        <span>15</span>
-                        <span>Jan</span>
-                    </div>
-                </div>
-                <div class="post-info">
-                    <span class="post-category">Admin | Tours & Travel</span>
-                    <p>win exciting deals and join us in a trip to maldives</p>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-image" style="background-image: url('https://th.bing.com/th/id/OIP.2nMwjtdrcelbm1eCR9NirgHaE8?rs=1&pid=ImgDetMain');">
-                    <div class="post-date">
-                        <span>12</span>
-                        <span>Feb</span>
-                    </div>
-                </div>
-                <div class="post-info">
-                    <span class="post-category">Admin | Tours & Travel</span>
-                    <p>join us in a trip to the seven sisters</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Blog Card 2 -->     
+    <div class="post-1">      
+      <div class="post-image-1" style="background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQLSkB9isGkdVyvd2nZewGeF7MQn7ouN5ouy3nFInLg6iUscVHndMVqccNQ2E1HD4h7C1qt3nTbMyTNJXM97U5-EKPCchDs0kPSDwL4Qw');">                     
+        <div class="post-date-1">                         
+          <span>15</span>                         
+          <span>Jan</span>                     
+        </div>                 
+      </div>       
+      <div class="post-info-1">         
+        <span class="post-category-1">Admin | Tours & Travel</span>         
+        <p>Win exciting deals and join us in a trip to Maldives</p>         
+        <div class="button-group-1">           
+          <button class="blogpost-buttons" onclick="likePost(2)">❤ I loved this</button>           
+          <button class="blogpost-buttons" onclick="dislikePost(2)">🙁 Maybe another</button>           
+          <button class="blogpost-buttons" onclick="savePost(2)">🔖 Save for later</button>         
+        </div>         
+        <p class="status-msg-1" id="status2-1"></p>         
+        <p class="counter-1">❤️ Likes: <span id="likeCount2-1">0</span> | 🙁 Dislikes: <span id="dislikeCount2-1">0</span></p>       
+      </div>     
+    </div>      
+    <!-- Blog Card 3 -->     
+    <div class="post-1">       
+      <div class="post-image-1" style="background-image: url('https://th.bing.com/th/id/OIP.2nMwjtdrcelbm1eCR9NirgHaE8?rs=1&amp;pid=ImgDetMain');">                     
+        <div class="post-date-1">                         
+          <span>12</span>                         
+          <span>Feb</span>                     
+        </div>                 
+      </div>       
+      <div class="post-info-1">         
+        <span class="post-category-1">Admin | Tours & Travel</span>         
+        <p>Join us in a trip to the Seven Sisters</p>         
+        <div class="button-group-1">           
+          <button class="blogpost-buttons" onclick="likePost(3)">❤ I loved this</button>           
+          <button class="blogpost-buttons" onclick="dislikePost(3)">🙁 Maybe another</button>           
+          <button class="blogpost-buttons" onclick="savePost(3)">🔖 Save for later</button>         
+        </div>         
+        <p class="status-msg-1" id="status3-1"></p>         
+        <p class="counter-1">❤️ Likes: <span id="likeCount3-1">0</span> | 🙁 Dislikes: <span id="dislikeCount3-1">0</span></p>       
+      </div>     
+    </div>    
+  </div> 
+</div>
 
     <footer class="site-footer">
         <div class="footer-content">
@@ -563,5 +564,6 @@
         <script src="Map.js"></script>
         <script src="username.js"></script>
         <script src="subscribe.js"></script>
+        <script src="gagana.js"></script>
  </body>
 </html>
