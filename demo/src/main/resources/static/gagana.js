@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api/blog';
+const API_BASE_URL = 'https://explorer-s-atlas.onrender.com/api/blog';
 
 let postData = {
     1: { likes: 0, dislikes: 0, saved: false },
