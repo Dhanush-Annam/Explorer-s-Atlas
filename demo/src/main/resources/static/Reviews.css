@@ -23,6 +23,33 @@ body {
   box-shadow: 0 30px 45px rgba(0, 0, 0, 0.15);
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.nav-left .logo {
+  height: 60px;
+  border-radius: 8px;
+}
+
+.nav-right .nav-link {
+  margin-left: 20px;
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-right .nav-link:hover {
+  color: #2e7d32;
+}
+
 h2 {
   text-align: center;
   font-family: 'Playfair Display', serif;
