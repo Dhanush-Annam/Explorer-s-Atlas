@@ -105,24 +105,16 @@ function closechat(){
 }
 
 async function callgemini(userInput) {
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyAGsNSHKpQ5nShKprYXgHP1vS67D5lcTMM", {
+    const response = await fetch("https://explorer-s-atlas.onrender.com/api/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            contents: [
-                {
-                    role: "user",
-                    parts: [{ text: userInput }]
-                }
-            ]
-        })
+        body: JSON.stringify({ userMessage: userInput })
     });
 
     const data = await response.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn’t generate a response.";
-    return reply;
+    return data.botMessage || "Sorry, I couldn’t generate a response.";
 }
 
 

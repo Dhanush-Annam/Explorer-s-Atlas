@@ -97,7 +97,7 @@ function handleBookingFormSubmit(event) {
   formData.append("travelDate", travelDate);
   formData.append("returnDate", returnDate);
 
-  fetch("http://localhost:8080/bookings/add",{
+  fetch("https://explorer-s-atlas.onrender.com/bookings/add",{
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",

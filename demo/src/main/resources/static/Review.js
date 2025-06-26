@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/reviews";
+const API_URL = "https://explorer-s-atlas.onrender.com/api/reviews";
 
 function submitReview() {
   const name = document.getElementById('name').value.trim();

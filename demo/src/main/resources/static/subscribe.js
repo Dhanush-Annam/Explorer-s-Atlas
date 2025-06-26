@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.innerHTML = 'Sending...';
         submitButton.disabled = true;
 
-        fetch("http://localhost:8080/api/subscribe", {
+        fetch("https://explorer-s-atlas.onrender.com/api/subscribe", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"

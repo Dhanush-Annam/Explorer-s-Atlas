@@ -35,7 +35,7 @@ function loadTasks() {
     return;
   }
   fetch(
-    `http://localhost:8080/todo/get?userEmail=${encodeURIComponent(
+    `https://explorer-s-atlas.onrender.com/todo/get?userEmail=${encodeURIComponent(
       globalUserEmail
     )}`
   )
@@ -64,7 +64,7 @@ function loadTrips() {
     return;
   }
   fetch(
-    `http://localhost:8080/bookings/user/${encodeURIComponent(globalUserEmail)}`
+    `https://explorer-s-atlas.onrender.com/bookings/user/${encodeURIComponent(globalUserEmail)}`
   )
     .then((response) => {
       if (!response.ok) {
@@ -92,7 +92,7 @@ function loadBookedHotels() {
     return;
   }
   fetch(
-    `http://localhost:8080/api/hotelbooking/${encodeURIComponent(
+    `https://explorer-s-atlas.onrender.com/api/hotelbooking/${encodeURIComponent(
       globalUserEmail
     )}`
   )
@@ -382,7 +382,7 @@ function displayTask(taskObj) {
     if (this.checked) {
       const taskId = taskObj.taskId;
 
-      fetch(`http://localhost:8080/todo/delete?id=${taskId}`, {
+      fetch(`https://explorer-s-atlas.onrender.com/todo/delete?id=${taskId}`, {
         method: "DELETE",
       })
         .then((response) => {
@@ -427,7 +427,7 @@ function addtodolist() {
   params.append("userEmail", userEmail);
   params.append("taskContent", taskcontent);
 
-  fetch("http://localhost:8080/todo/add", {
+  fetch("https://explorer-s-atlas.onrender.com/todo/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
@@ -484,7 +484,7 @@ function addTrip() {
   params.append("travelDate", travelDate);
   params.append("returnDate", returnDate);
 
-  fetch("http://localhost:8080/bookings/add", {
+  fetch("https://explorer-s-atlas.onrender.com/bookings/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
